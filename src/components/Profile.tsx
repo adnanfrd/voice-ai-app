@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Edit, LogOut, User } from "lucide-react";
 
 interface UserProfile {
@@ -40,10 +41,13 @@ const Profile = () => {
 
         {/* Profile Picture */}
         <div className="flex flex-col items-center mt-4">
-          <img
+          <Image
             src={user.profilePicture}
             alt="Profile"
-            className="w-24 h-24 rounded-full border-2 border-gray-300 dark:border-gray-600"
+            width={96} // 24 * 4 (w-24 in tailwind)
+            height={96} // 24 * 4
+            className="rounded-full border-2 border-gray-300 dark:border-gray-600"
+            priority
           />
           {isEditing && (
             <input
