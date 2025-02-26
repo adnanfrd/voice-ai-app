@@ -12,8 +12,8 @@ interface Recording {
 
 const Home = () => {
   const router = useRouter();
-  const [isLoggedIn, setIsLoggedIn] = useState(true); // Change based on authentication
-  const [recentRecordings, setRecentRecordings] = useState<Recording[]>([
+  const [isLoggedIn] = useState(true); 
+  const [recentRecordings] = useState<Recording[]>([
     { id: 1, name: "John Doe", date: "Feb 25, 2025" },
     { id: 2, name: "Jane Smith", date: "Feb 24, 2025" },
   ]);
