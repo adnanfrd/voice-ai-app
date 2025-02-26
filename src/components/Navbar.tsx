@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Menu, X, User, LogOut } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,16 +12,25 @@ const Navbar = () => {
   return (
     <nav className="bg-gradient-to-r from-purple-600 to-pink-500 p-4 shadow-lg">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <Link href="/" className="text-white text-2xl font-bold">
-          Voice_AI_APP
+        {/* Logo */}
+        <Link href="/">
+          <Image
+            src="/logo.png" 
+            alt="VoiceAI Logo"
+            width={60} 
+            height={15} 
+            className="cursor-pointer"
+          />
         </Link>
 
-        <div className="hidden md:flex space-x-6 text-white">
+        {/* Desktop Menu */}
+        <div className="hidden md:flex space-x-6 text-white items-center">
           <Link href="/" className="hover:text-gray-300">Home</Link>
           <Link href="/record" className="hover:text-gray-300">Record Voice</Link>
           <Link href="/history" className="hover:text-gray-300">History</Link>
           <Link href="/settings" className="hover:text-gray-300">Settings</Link>
 
+          {/* Profile Dropdown */}
           <div className="relative">
             <button 
               onClick={() => setProfileOpen(!profileOpen)}
