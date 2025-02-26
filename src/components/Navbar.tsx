@@ -10,16 +10,16 @@ const Navbar = () => {
   const [profileOpen, setProfileOpen] = useState(false);
 
   return (
-    <nav className="bg-gradient-to-r from-purple-600 to-pink-500 p-4 shadow-lg">
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
+    <nav className="bg-gradient-to-r from-purple-600 to-pink-500 h-[10vh] flex items-center px-6 shadow-lg">
+      <div className="max-w-7xl mx-auto flex justify-between items-center w-full">
         {/* Logo */}
-        <Link href="/">
+        <Link href="/" className="h-full flex items-center">
           <Image
-            src="/logo.png" 
+            src="/Indigo Modern AI Company Logo.png"
             alt="VoiceAI Logo"
-            width={60} 
-            height={15} 
-            className="cursor-pointer"
+            width={150}  // Adjust width as needed
+            height={50}   // Adjust height proportionally
+            className="h-full w-auto object-contain"
           />
         </Link>
 
@@ -32,7 +32,7 @@ const Navbar = () => {
 
           {/* Profile Dropdown */}
           <div className="relative">
-            <button 
+            <button
               onClick={() => setProfileOpen(!profileOpen)}
               className="flex items-center space-x-2 hover:text-gray-300"
             >
@@ -61,12 +61,12 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden mt-4 space-y-2 text-white text-center">
+        <div className="absolute top-[10vh] left-0 w-full bg-gradient-to-r from-purple-600 to-pink-500 md:hidden space-y-2 text-white text-center py-4">
           <Link href="/" className="block py-2 hover:text-gray-300">Home</Link>
           <Link href="/record" className="block py-2 hover:text-gray-300">Record Voice</Link>
           <Link href="/history" className="block py-2 hover:text-gray-300">History</Link>
           <Link href="/settings" className="block py-2 hover:text-gray-300">Settings</Link>
-          <button 
+          <button
             onClick={() => setProfileOpen(!profileOpen)}
             className="w-full py-2 flex justify-center items-center space-x-2 hover:text-gray-300"
           >

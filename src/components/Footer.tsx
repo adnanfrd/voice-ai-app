@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         
         {/* Logo & Copyright */}
         <div className="flex items-center space-x-3">
-          <Image src="/logo.png" alt="VoiceAI Logo" width={40} height={40} />
+          <Image src="/Indigo Modern AI Company Logo.png" alt="VoiceAI Logo" width={40} height={40} />
           <span className="text-sm">&copy; {new Date().getFullYear()} VoiceAI. All rights reserved.</span>
         </div>
 
