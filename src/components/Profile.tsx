@@ -12,7 +12,7 @@ interface UserProfile {
 
 const Profile = () => {
   const [user, setUser] = useState<UserProfile>({
-    name: "Adnan Farid",
+    name: "Adnan Fareed",
     email: "adnan@example.com",
     profilePicture: "https://via.placeholder.com/150",
   });
