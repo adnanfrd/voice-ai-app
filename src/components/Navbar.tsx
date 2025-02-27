@@ -12,25 +12,22 @@ const Navbar = () => {
   return (
     <nav className="bg-gradient-to-r from-purple-600 to-pink-500 h-[10vh] flex items-center px-6 shadow-lg">
       <div className="max-w-7xl mx-auto flex justify-between items-center w-full">
-        {/* Logo */}
         <Link href="/" className="h-full flex items-center">
           <Image
             src="/Indigo Modern AI Company Logo.png"
             alt="VoiceAI Logo"
-            width={150}  // Adjust width as needed
-            height={50}   // Adjust height proportionally
+            width={150}  
+            height={50}   
             className="h-full w-auto object-contain"
           />
         </Link>
 
-        {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6 text-white items-center">
           <Link href="/" className="hover:text-gray-300">Home</Link>
           <Link href="/record" className="hover:text-gray-300">Record Voice</Link>
           <Link href="/history" className="hover:text-gray-300">History</Link>
           <Link href="/settings" className="hover:text-gray-300">Settings</Link>
 
-          {/* Profile Dropdown */}
           <div className="relative">
             <button
               onClick={() => setProfileOpen(!profileOpen)}
@@ -53,13 +50,11 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Menu Button */}
         <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden text-white">
           {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {menuOpen && (
         <div className="absolute top-[10vh] left-0 w-full bg-gradient-to-r from-purple-600 to-pink-500 md:hidden space-y-2 text-white text-center py-4">
           <Link href="/" className="block py-2 hover:text-gray-300">Home</Link>

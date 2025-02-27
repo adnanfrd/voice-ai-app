@@ -20,12 +20,10 @@ const Profile = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [updatedUser, setUpdatedUser] = useState(user);
 
-  // Handle Input Change
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUpdatedUser({ ...updatedUser, [e.target.name]: e.target.value });
   };
 
-  // Save Changes
   const saveChanges = () => {
     setUser(updatedUser);
     setIsEditing(false);
@@ -39,13 +37,12 @@ const Profile = () => {
           Profile
         </h1>
 
-        {/* Profile Picture */}
         <div className="flex flex-col items-center mt-4">
           <Image
             src={user.profilePicture}
             alt="Profile"
-            width={96} // 24 * 4 (w-24 in tailwind)
-            height={96} // 24 * 4
+            width={96} 
+            height={96} 
             className="rounded-full border-2 border-gray-300 dark:border-gray-600"
             priority
           />
@@ -61,7 +58,6 @@ const Profile = () => {
           )}
         </div>
 
-        {/* User Details */}
         <div className="mt-4">
           <label className="text-gray-700 dark:text-gray-300 block font-medium">📛 Name</label>
           {isEditing ? (
@@ -92,7 +88,6 @@ const Profile = () => {
           )}
         </div>
 
-        {/* Buttons */}
         <div className="mt-6 flex justify-between">
           {isEditing ? (
             <button
