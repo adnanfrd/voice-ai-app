@@ -14,7 +14,7 @@ const Profile = () => {
   const [user, setUser] = useState<UserProfile>({
     name: "Adnan Fareed",
     email: "adnan@example.com",
-    profilePicture: "https://via.placeholder.com/150",
+    profilePicture: "/globe.svg",
   });
 
   const [isEditing, setIsEditing] = useState(false);
