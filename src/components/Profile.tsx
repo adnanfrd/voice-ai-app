@@ -46,6 +46,7 @@ const Profile = () => {
             className="rounded-full border-2 border-gray-300 dark:border-gray-600"
             priority
           />
+          
           {isEditing && (
             <input
               type="text"

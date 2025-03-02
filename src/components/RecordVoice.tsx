@@ -91,6 +91,7 @@ const RecordVoice = () => {
           <span className="text-gray-700">Processing Voice Data...</span>
         </div>
       )}
+      
 
       {extractedData && !isProcessing && (
         <div className="mt-6 bg-white p-6 rounded-lg shadow-md w-full max-w-md">
